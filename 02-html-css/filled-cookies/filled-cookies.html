@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Filled Cookies</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <div>
+          <h1>Filled Cookies</h1>
+          <p>Yield: 250 cookies</p>
+        </div>
+
+        <!--
+          Explanation behind the use of div:
+
+          In order for the grid to work properly, two child elements
+          are needed. Without the div, there would be three (h1, p,
+          img). In this case, div is used to group h1 and p into
+          their own box. The content is already grouped into header
+          and isn't being described further (which is why a
+          structural element, like section, is not used here) so div
+          is entirely appropriate for this purpose.
+        -->
+
+        <img src="img/cookies.jpg" alt="Cookies" />
+      </header>
+
+      <main>
+        <section class="ingredients">
+          <h2>Ingredients</h2>
+
+          <ul>
+            <li>1 1/4 quart butter (2 1/2 pounds)</li>
+            <li>1 2/3 tablespoon vanilla</li>
+            <li>1 1/4 quart sugar (2 1/2 pounds)</li>
+            <li>5 eggs</li>
+            <li>3 3/4 quarts flour (3 3/4 pounds)</li>
+            <li>1/3 cup baking powder (2 ounces)</li>
+            <li>1 pint evaporated milk</li>
+            <li>1 cup water, mixed with evaporated milk</li>
+            <li>Jam, fig or other filling</li>
+          </ul>
+
+        </section>
+
+        <section class="instructions">
+          <h2>Instructions</h2>
+
+          <ol>
+            <li>Mix cream and butter with vanilla.</li>
+            <li>Add sugar and continue creaming until light and fluffy.</li>
+            <li>Add eggs.</li>
+            <li>Sift flour, then measure.</li>
+            <li>Resift flour with baking powder.</li>
+            <li>Add flour alternately with the diluted milk to the creamed butter and sugar mixture, beginning and ending with flour.</li>
+            <li>Chill dough, then roll out and cut.</li>
+            <li>Spread half of each cookie with 1/2 teaspoon jam.</li>
+            <li>Fold over other half and press edges together.</li>
+            <li>Place on greased baking sheets and bake in a moderate oven (350°F) 8 to 10 minutes.</li>
+          </ol>
+        </section>
+
+        <section class="credits">
+          <p>Authors: Mabelle S. Ehlers, Florence J. Atwood</p>
+          <p>Image: RitaE (Pixabay License)</p>
+          <p><a href="https://publicdomainrecipes.org/recipes/filled-cookies/">Original recipe</a></p>
+        </section>
+
+      </main>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="utf-8" />
+		<title>Asparagus</title>
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+    <!--
+      This is a bit of a break from the original version. I don't want
+      to identify who did the original (without permission), so there
+      are a few aspects I left unchanged. I will identify these
+      throughout.
+    -->
+
+    <div id="wrapper">
+
+  	  <header>
+  		  <h1>Asparagus</h1>
+        <h2>By Margaret W. Howard</h2>
+
+        <!--
+          How an h1 and an h2? Think of the h2 in this case as a subhead.
+          (Subheads are permitted at any level.) But moving forward, any
+          heading we use would be one higher than the subhead.
+        -->
+
+  			<img src="img/asparagus.jpg" alt="Asparagus" />
+
+        <!--
+          The above image can probably be smaller in both dimensions
+          and file size, but it's not too bad ... so we let it be.
+
+          Where this may be an issue is when we test the page by
+          'breaking' the stylesheet. The photo is quite large.
+        -->
+
+        <p>Photo by Markus Spiske on Unsplash</p>
+  		</header>
+
+  		<main>
+        <section>
+          <h3>Ingredients</h3>
+
+          <!--
+            The original example used all table headings for the content;
+            this is incorrect. Below is an example of a proper table.
+
+            The issue with this design-wise is it leaves a chunk of
+            unused whitespace to the right. It is probably possible to
+            rework the content in the header to better balance out this
+            part of the page, but without the original author's intent,
+            I left it as-is to at least demonstrate proper use of a
+            table.
+          -->
+
+          <table>
+            <tr>
+              <th>Ingredient</th> <!-- table headings -->
+              <th>Amount</th>
+            </tr>
+
+            <tr>
+              <td>asparagus</td> <!-- table data -->
+              <td>1 bunch</td>
+            </tr>
+
+            <tr>
+              <td>boiling water</td>
+              <td>3 quarts</td>
+            </tr>
+
+            <tr>
+              <td>butter</td>
+              <td>3 tablespoons</td>
+            </tr>
+
+            <tr>
+              <td>salt</td>
+              <td>1 tablespoon</td>
+            </tr>
+
+            <tr>
+              <td>pepper</td>
+              <td>1/3 teaspoon</td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h3>Instructions</h3>
+
+          <!--
+            This takes us out of the comfort zone of applying a grid to
+            structural tags. Anything can utilize grid layout. :)
+
+            But this introduces a problem: When we change a list to
+            display as a grid, the default bullets/increment disppear.
+            We can fix this in CSS! (See style.css for details.)
+          -->
+
+     		  <ol>
+            <li>Vegetables should be thoroughly washed and cooked till tender in freshly boiling, salted water (1/2 tablespoon salt to 1 quart water) <img src="img/01-washed-asparagus.jpg" alt="Washed vegetables." /></li>
+
+            <li>Remove white part of stalk and tie in bunches. <img src="img/02-tie-in-bunches.jpg" alt="Asparagus tied in a bunch." /></li>
+
+            <li>Cook about 20 minutes. <img src="img/03-cook-asparagus.jpg" alt="Asparagus in a pan." /></li>
+
+            <li>When asparagus is soft, drain well and place on slices of buttered toast which have been previously dipped in the water in which the asparagus was cooked. <img src="img/04-asparagus-on-bread.jpg" alt="Asparagus on bread."></li>
+
+            <li>Season with salt and pepper. <img src="img/05-seasoned-asparagus.jpg" alt="Seasoned asparagus."/></li>
+          </ol>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

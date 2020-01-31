@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700i&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+#wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+img {
+  border: 1px solid rgba(115,139,41,0.3);
+  width: 100%;
+  height: auto;
+}
+
+ol {
+  padding-left: 0;
+}
+
+li {
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 36px 1fr 200px;
+  grid-column-gap: 20px;
+  margin-bottom: 20px;
+  counter-increment: auto-increment-numbers;
+}
+
+li:before {
+  content: counter(auto-increment-numbers);
+  font-size: 36px;
+  background-color: rgba(115,139,41,0.3);
+  text-align: center;
+}
+
+/*
+  In order to re-apply the counter which was stripped by changing the
+  list items to a grid, we create a custom counter using the
+  counter-increment property. We can then use this 'variable' in a
+  'counter' CSS function to apply it in the portion before each
+  list item.
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment
+  https://developer.mozilla.org/en-US/docs/Web/CSS/counters
+
+  But ... this creates a design problem. :( The numbers don't align
+  with the content to their right. So we cheated by putting a
+  background in the portion before each list item, which kind of
+  creates an illusion of alignment across the page.
+
+  (The color, by the way, was selected by using the Digital Color
+  Meter to pick a shade of green from the main asparagus image.)
+*/
+
+table {
+  border-top: 1px solid #222;
+  border-left: 1px solid #222;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  background-color: #ddd;
+}
+
+th, td {
+  border-bottom: 1px solid #222;
+  border-right: 1px solid #222;
+  padding: 3px 5px;
+}
+
+header h1,
+header h2,
+header p {
+  margin: 0;
+}
+
+header img {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
