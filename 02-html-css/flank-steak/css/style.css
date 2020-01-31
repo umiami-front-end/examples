@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Economica:700|Open+Sans&display=swap');
+
+body {
+  margin: 0;
+  color: #969696;
+  border: 15px solid #adacac;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#wrapper {
+  margin: 20px auto;
+  max-width: 60%;
+}
+
+h1, h2 {
+  color: #535151;
+  font-family: 'Economica', sans-serif;
+  font-weight: 700;
+}
+
+/*
+  Because the original example had h2 set to a larger font size than
+  the h1, this has been adjusted. From a design standpoint subheads
+  are usually smaller than the heading.
+*/
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+/*
+  The following allows the image to be responsive. Try adjusting the
+  browser width to see this effect.
+*/
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin-top: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*
+  The following rule basically puts a grid within a grid!
+
+  There will be a subgrid propery eventually, but it has not yet been
+  adopted by browser makers.
+*/
+
+main .info {
+  grid-column: 1 / -1;
+  /*
+    The property above stretches .info across two columns of the main
+    grid ... and the two below turn .info into its own grid.
+  */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+main .info p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.side-info{
+  font-size: 14px;
+}

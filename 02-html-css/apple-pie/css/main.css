@@ -1,0 +1,51 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+a{
+  color: rosybrown;
+  text-decoration: none;
+}
+
+a:hover{
+  color: darksalmon;
+}
+
+h1,
+h2,
+h3 {
+  color: rgb(104, 78, 78);
+  font-family: "Tahoma", sans-serif;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+img {
+  border: 10px solid rosybrown;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  grid-column-gap: 40px;
+}
+
+.picture p {
+  color: #999;
+}
+
+.other h2 {
+  font-size: 16px;
+}
+
+.picture p,
+.other p {
+  margin: 0;
+}
