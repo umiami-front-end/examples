@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Specificity 03</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      section#preamble article:first-child p > a {
+        color: red;
+      }
+
+      #preamble .a.b.c.d a {
+        color: blue;
+      }
+    </style>
+    <!--
+      Because the rules in style come after the imported style sheet,
+      they "win" in any conflicts.
+    -->
+  </head>
+
+  <body>      
+    <section id="preamble">
+      <article>
+        <p class="a b c d">Iure corporis beatae sapiente. Quia <a href="#">suscipit</a> consequatur consequatur accusamus blanditiis sint qui. Id ut temporibus possimus repellendus dignissimos. Temporibus facilis saepe vitae minus expedita quod veniam. Soluta dolorem voluptas sunt molestias ipsum debitis. Hic nihil</p>
+      </article>
+    </section>
+  </body>
+</html>
