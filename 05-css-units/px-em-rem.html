@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="utf-8" />
+		<title>px, em, rem</title>
+	  <style>
+		  html {
+			  font-size: 16px;
+			}
+
+      p {
+        font-size: 2em;
+        color: #eee;
+      }
+
+      #px,
+      #em,
+      #rem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1em;
+      }
+
+		  #px {
+			  background-color: rgb(42,4,74);
+			  width: 160px;
+				height: 160px;
+			}
+
+      /* #embox {
+        font-size: 12px;
+      } */
+
+      #em {
+        background-color: rgb(11,46,89);
+			  width: 10em;
+				height: 10em;
+      }
+
+      #rem {
+        background-color: rgb(13,103,89);
+			  width: 10rem;
+				height: 10rem;
+      }
+		</style>
+	</head>
+
+	<body>
+
+	  <div id="px">
+		  <p>px!</p>
+		</div>
+
+    <div id="embox">
+  		<div id="em">
+  		  <p>em!</p>
+  		</div>
+    </div>
+
+		<div id="rem">
+		  <p>rem!</p>
+		</div>
+
+	</body>
+</html>

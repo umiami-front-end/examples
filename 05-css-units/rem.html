@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="utf-8" />
+		<title>rem - nested</title>
+	  <style>
+		  html {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      p.two {
+        font-size: 2rem;
+      }
+
+      p.three {
+        font-size: 3rem;
+      }
+
+      div {
+        font-size: 12px;
+      }
+		</style>
+	</head>
+
+	<body>
+
+    <p>The default font size is 16px.</p>
+
+    <div>
+      <p>This div's font size is set to 12px. (But it doesn't matter because we're basing our font size off <code>html</code> not <code>div</code>.)</p>
+
+      <p class="two">This sentence is 2em.</p>
+
+      <p class="three">This sentence is 3em.</p>
+    </div>
+
+	</body>
+</html>

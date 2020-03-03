@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="utf-8" />
+		<title>px, em, rem</title>
+	  <style>
+		  html {
+			  font-size: 16px;
+			}
+
+      body {
+        margin: 0;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        font-size: 2em;
+        color: #eee;
+      }
+
+		  div {
+        background-color: black;
+			  width: 50vw;
+				height: 50vh;
+        position: absolute;
+			}
+
+      #blue {
+        background-color: rgb(35	175	250);
+        bottom: 0;
+        right: 0;
+      }
+
+      #yellow {
+        background-color: rgb(230,191,39);
+        bottom: 0;
+        left: 0;
+      }
+
+      #red {
+        background-color: rgb(238,67,39);
+        top: 0;
+        right: 0;
+      }
+
+      #green {
+        background-color: rgb(0,164,106);
+        top: 0;
+        left: 0;
+      }
+		</style>
+	</head>
+
+	<body>
+
+    <div id="green"></div>
+
+    <div id="red"></div>
+
+	  <div id="yellow"></div>
+
+    <div id="blue"></div>
+
+	</body>
+</html>
