@@ -1,0 +1,20 @@
+* {
+  background: transparent;
+  color: black;
+  font-family: serif;
+}
+
+@page {
+  margin: 0.5in;
+}
+
+body {
+  font-size: 12pt;
+  border: 1pt dotted black;
+  padding: 0.25in;
+}
+
+h1 {
+  font-size: 72pt;
+  margin: 0;
+}

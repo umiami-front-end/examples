@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="UTF-8" />
+    <meta viewport="width=device-width;initial-scale=1" />
+		<title>Responsive Design: Images</title>
+    <style>
+      div {
+        max-width: 800px;
+      }
+
+      img {
+        width: 100%;
+        border: 1px solid #222;
+      }
+    </style>
+	</head>
+
+	<body>
+	  <h1>Responsive Images with <code>picture</code></h1>
+
+    <div>
+  		<picture>
+        <source media="(min-width: 1200px)" srcset="img/quorra-lg.jpg" />
+        <source media="(min-width: 768px)" srcset="img/quorra-md.jpg" />
+        <img src="img/quorra-sm.jpg" alt="Quorra, making it rain." />
+      </picture>
+    </div>
+	</body>
+</html>
