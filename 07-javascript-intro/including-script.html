@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="utf-8" />
+		<title>JavaScript Intro: Including Scripts</title>
+    <link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+    <header>
+      <h1>Including Scripts</h1>
+    </header>
+
+    <main>
+      <p>The following example shows how scripts are included in an HTML document. Please see the code for details and comments. Open the JavaScript Console to see the results.</p>
+    </main>
+
+
+    <!--
+      Scripts should be placed at the very end of an HTML document.
+      This allows the page time to load before the script is put into
+      action. Unless a library you are using specifies otherwise, place
+      the script just before the closing body tag.
+
+      Scripts can be written inside script tags within HTML or
+      contained in another document and linked to.
+
+      The following is an example of an embedded script:
+    -->
+
+    <script>
+      console.log("Hello! This message is coming from HTML!");
+    </script>
+
+    <!--
+      And below is an example of a linked script.
+
+      (The name of your file - - script.js - - can be anything.)
+
+      To keep your files organized, it is generally recommended to
+      place scripts in a 'js' or 'scripts' folder.
+    -->
+
+    <script src="js/script.js"></script>
+
+    <!--
+      When to use what? If you are using a script on just one page, it
+      would be okay to embed the script on the page. If the script will
+      be used on multiple pages, link to the file.
+
+      In some cases, you may need a mix of both.
+
+      From a technical standpoint, how the script is includes should
+      not necessarily make a difference.
+    -->
+	</body>
+</html>

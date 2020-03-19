@@ -1,0 +1,27 @@
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+code {
+  background-color: #ccc;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+main {
+  max-width: 48em;
+}
+
+article {
+  margin-bottom: 1.5em;
+}
+
+article > p {
+  margin: 0;
+}
+
+article > p:last-child::before {
+  content: " • ";
+}
