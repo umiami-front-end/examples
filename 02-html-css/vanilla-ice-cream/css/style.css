@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,800&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+	font-weight: 300;
+}
+
+#wrapper {
+  width: 50rem; /* 800px / 16px */
+  margin: 0 auto;
+}
+
+a:link,
+a:visited {
+  color: rgb(153, 0, 51);
+}
+
+a:hover {
+  color: rgb(0, 51, 153);
+}
+
+h1 {
+  color: #fff; /* white */
+  background-color: rgb(255,51,102); /* fuschia */
+  border-radius: 1rem;
+  padding: 1rem;
+  font-variant-caps: small-caps;
+}
+
+h2 {
+  color: rgb(255,51,102);
+}
+
+p,
+li {
+  color: rgb(0,102,153);
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: 800;
+}
+
+figure {
+  margin: 0;
+  margin-right: 2rem;
+  float: left;
+}
+
+figure > img {
+  border: 4px solid rgb(255,51,102);
+  border-radius: 1rem; /* why not? :) */
+}
+
+figcaption {
+  color: rgb(255,51,102);
+  font-size: .75rem;
+}
+
+figcaption > p {
+  margin: 0;
+  text-align: right;
+}
+
+main {
+  background-color: rgba(204,230,255,0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+section {
+  clear: both;
+  overflow: auto;
+}
+
+section:first-child {
+  margin-bottom: 1rem;
+}
+
+section:first-child > h2 {
+  margin-top: 0;
+}
+
+section:first-child > p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+section:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section:last-child article:last-child {
+  grid-column: 1 / -1;
+}
+
+article:first-child > p {
+  color: rgb(253,142,143);
+  font-size: 0.75rem;
+}
+
+article:last-child > h2 {
+  color: #fff;
+  background-color: rgb(243,209,224);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+article:last-child > ul {
+  background-color: rgb(243,209,224);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 1rem;
+  margin-bottom: 0;
+}
+
+/*
+  Check this out... :)
+
+  The content as initially presented was:
+
+    Equipment: pot, double boiler, freezer
+
+  This probably should be (semantically) a nested list as the content
+  after "Equipment" is, well, a list. But what if we want it displayed
+  as is specified above, not a vertical list of bullet points?
+
+  This is how we pull it off:
+*/
+
+article:last-child > ul > li > ul,
+article:last-child > ul > li > ul > li {
+  display: inline;
+  padding: 0;
+}
+
+/* :) */
+article:last-child > ul > li > ul > li::after {
+  content: ", ";
+}
+
+article:last-child > ul > li > ul > li:last-child::after {
+  content: "";
+}
+
+/*
+  I realize this is *extremely* frivolous, but it's a good example of
+  using child selectors, pseudo-classes and pseudo-elements to create
+  a better semantic solution while still achieving the desired visual!
+*/
