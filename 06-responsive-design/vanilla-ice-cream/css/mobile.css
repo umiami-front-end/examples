@@ -1,0 +1,101 @@
+/*
+  Remember the characteristic of inheritance.
+
+	All the rules written for the desktop version of a site will
+	inherit on a mobile site unless they are explicitally overwritten.
+
+	With a responsive design, we only change what is necessary to
+	modify the design.
+*/
+
+@media (max-width: 768px) {
+
+	html {
+		font-size: 20px;
+	}
+
+	/*
+	  Increase the font size to aid readability on smaller screens.
+	*/
+
+	#wrapper {
+	  max-width: 48rem; /* 768 / 16px */
+	}
+
+	/*
+	  The original example set a max-width of 50rem. But with this media
+		query, the device width would be no bigger than 48rem (768px). This
+		probably does not be set (because max-width allows flexibility by
+		default), but I'm providing this example to show we may have
+		properties to change.
+	*/
+
+	h1 {
+		margin-top: 0;
+	}
+
+	img {
+	  width: 100%;
+	  height: auto;
+	}
+
+	/*
+	  Assures our images will adjust to fill the space available
+		regardless of what that size is. It's still used in conjunction
+		with the <picture> tag, which changes the image used based on
+		the device/viewport size.
+
+		We *could* have just one image (without <picture>) which is
+		massive in file size and dimensions. But if that image is 1000px
+		and loads on a device which doesn't have more than, say, 400px,
+		a user is still downloading the full 1000px.
+	*/
+
+	figure {
+	  margin-right: 0;
+		margin-bottom: 0.5rem;
+	  float: none;
+		grid-column: 1 / -1;
+	}
+
+	figcaption {
+		display: none;
+	}
+
+	main {
+	  padding: 1rem;
+	}
+
+	section:last-child {
+	  display: block;
+	}
+
+	section:last-child article:first-child ul {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		list-style: none;
+		padding-left: 0;
+	}
+
+}
+
+@media (max-width: 414px) {
+	section:last-child ul,
+	section:last-child ol {
+		padding-left: 1rem;
+	}
+
+	section:last-child article:first-child ul {
+		display: block;
+		list-style-type: circle;
+	}
+
+	section:last-child article:last-child {
+		font-size: 0.9rem;
+	}
+
+	section:last-child article:last-child > ul {
+		padding-left: 2rem;
+	}
+
+}

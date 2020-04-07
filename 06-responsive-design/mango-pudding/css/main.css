@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: gray;
+}
+
+a:hover {
+  color: orangered;
+}
+
+img {
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 2.5rem solid pink;
+  border-right: 2.5rem solid orangered;
+  border-bottom: 2.5rem solid orangered;
+  border-left: 2.5rem solid pink;
+}
+
+figure {
+  max-width: 790px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  padding-right: 1rem;
+}
+
+/* below is to remove the auto bullet */
+ul {
+  list-style: none;
+}
+
+/* Then the below adds a color bullet. */
+ul li::before {
+  content: "\25AA";
+  color: orangered;
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+/* The below three add color to the numbering and adjust numbering indentation */
+ol {
+  list-style: none;
+  counter-reset: li;
+  padding-left: 2.5rem;
+}
+
+ol li::before {
+  content: counter(li) ".";
+  color: orangered;
+  display: inline-block;
+  width: 1.75rem;
+  margin-left: -1.75rem;
+}
+
+ol li {
+  counter-increment: li;
+}
+
+header > h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #2c2c2c;
+  font-size: 4rem;
+  line-height: 5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: .15rem solid pink;
+}
+
+main > section:last-child {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 auto;
+  grid-gap: 2rem;
+}
+
+article {
+  border: .15rem solid pink;
+}
+
+article > h2 {
+  background-color: pink;
+  font-size: 2rem;
+  text-align: center;
+  color: #2c2c2c;
+  padding-bottom: .25rem
+}
+
+article p {
+  padding-left: 1.5rem;
+}
+
+figcaption p {
+  text-align: center;
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+
+footer p:first-child {
+  text-align: center;
+  margin-top: 2rem;
+}

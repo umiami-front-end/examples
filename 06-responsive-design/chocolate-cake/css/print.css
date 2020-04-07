@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+  background-color: transparent; /* no backgrounds for print */
+  color: black;
+}
+
+@page {
+  margin: 0.25;
+}
+
+body {
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 3.5in 3.5in;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href^="https"]::after {
+  content: " (" attr(href) ") ";
+}
+
+img {
+  filter: grayscale(100%);
+}
+
+header p {
+  display: none;
+}
+
+section:last-child p {
+  margin: 0;
+}

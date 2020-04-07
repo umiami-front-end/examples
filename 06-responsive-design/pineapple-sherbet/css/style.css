@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:200,300|Raleway:300&display=swap');
+
+html{
+  font-size: 10px;
+}
+
+body {
+  font-family:'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+div {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+a {
+  color: #84A59D;
+}
+
+a:hover {
+  color: #F28482;
+}
+
+h1, h2{
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+}
+
+h1{
+  color:#F7EDE2;
+  background-color: #F28482;
+  font-size: 7.2rem;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  background-color: #F6BD60;
+  font-size: 4rem;
+  padding-left: 1rem;
+  color:#F7EDE2;
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  background-color: #F7EDE2;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+section:first-child {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F7EDE2;
+}
+
+section:first-child p {
+  color: #84A59D;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+section:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+section:last-child h2 {
+  margin-bottom: 0;
+  background-color: #84A59D;
+}
+
+section:nth-child(2) ul,
+section:nth-child(2) ol {
+  list-style-position: outside;
+  padding-left: 2rem;
+}
+
+section:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* tablet */
+@media (max-width: 800px) {
+
+  html {
+    font-size: 20px;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1{
+    font-size: 4rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  section {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  section:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  section:first-child p {
+    font-size: 0.6rem;
+    margin-top: 0.25rem;
+  }
+
+  section:nth-child(2) {
+    display: block;
+  }
+
+  section:nth-child(2) h2 {
+    margin-bottom: 0;
+  }
+
+}
+
+/* mobile - 414px */
+@media (max-width: 414px) {
+
+  h1{
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding-left: 0.75rem;
+  }
+
+  section:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*
+    There just isn't enough room for three images!
+  */
+
+  section:first-child article:last-child {
+    display: none;
+  }
+
+  section:nth-child(2) ul,
+  section:nth-child(2) ol {
+    padding-left: 1.25rem;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  /*
+    When the screen adjusts to something even smaller, we might
+    consider eliminating one more image.
+  */
+
+  section:first-child {
+    display: block;
+  }
+
+  section:first-child article:first-child {
+    display: none;
+  }
+
+}

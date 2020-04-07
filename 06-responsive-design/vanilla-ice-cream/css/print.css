@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,800&display=swap');
+
+* {
+  color: #000; /* black */
+	background-color: transparent;
+}
+
+/*
+  Here's a *great!* use of the universal selector! Because we need the
+  pages to have black text against a transparent background (to
+  accommodate non-color printers), we can set every element to have
+  these properties.
+*/
+
+@page {
+  margin: 0.5in;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  font-size: 8pt;
+}
+
+#wrapper {
+  width: 5in;
+  height: 3in;
+  border: 0.5pt dashed #000;
+  padding: 0.05in;
+  position: relative;
+}
+
+h1 {
+  font-size: 12pt;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 0.1in;
+  font-size: 10pt;
+}
+
+ul, ol {
+  margin: 0;
+}
+
+ul {
+  display: grid;
+  padding-left: 0.125in;
+  grid-template-columns: repeat(2, 1.5in);
+  list-style: none;
+}
+
+ol {
+  padding-left: 0.25in;
+  line-height: 1.2;
+}
+
+img {
+  filter: grayscale(100%);
+}
+
+/*
+  It might be better to remove the image (which in this case is may not
+  be necessary). But if a graphic must remain on the site, apply the
+  filter property and change the image to grayscale.
+
+  However, be careful about the level of contrast. The details of a
+  color image changed to grayscale may be difficult to see. (And just
+  because *you* see it doesn't mean others will.)
+*/
+
+figure {
+  margin: 0;
+  position: absolute;
+  top: 0.05in;
+  right: 0.05in;
+}
+
+picture > img {
+  width: 1.25in;
+  height: auto;
+  border: 1px solid #000;
+}
+
+figcaption {
+  font-size: 6pt;
+}
+
+figcaption > p {
+  margin: 0;
+  text-align: right;
+  padding-right: 0.05in;
+}
+
+section {
+  clear: both;
+  overflow: auto;
+}
+
+section:first-child > h2,
+section:first-child > p {
+  display: none;
+}
+
+section:first-child > p:last-child {
+  display: block;
+  font-size: 8pt;
+  margin: 0;
+}
+
+section:last-child article p {
+  display: none;
+}
+
+section:last-child article:last-child {
+  display: none;
+}
+
+/*
+  Notice there is a significant amount of 'display: none' in this
+  example. Because the goal was to fit the content on the equivalent
+  of a 3x5 index card, there simply wasn't enough room for everything.
+  Sometimes solutions have nothing to do with code -- they're
+  editorial.
+
+  In this case, I chose to eliminate the prep/cook time and additional
+  information. (The image probably should have been nixed, but I wanted
+  to show it in this case to demonstrate the filter property.)
+*/
