@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubble</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Bubble</h1>
+
+    <ul>
+      <li>List Item</li>
+    </ul>
+
+    <p><small>When an item <em>bubbles</em> it starts at the most specific item (<code>li</code>) and goes up through the DOM tree.</small></p>
+
+    <script>
+
+      var ul = document.querySelector("ul");
+      var li = document.querySelector("li");
+
+      function showUl() {
+        event.preventDefault();
+        console.log("ul!");
+      }
+
+      function showLi() {
+        event.preventDefault();
+        console.log("li!")
+      }
+
+      // In this case, we are setting the third argument to false, which
+      // tells the browser, "find the more specific element and trigger
+      // it first."; li is more specific than ul.
+      //
+      // Notice how our statement for li is /after/ ul, but it still
+      // displays first in the console.
+      //
+      // This is the result of the browser determining the event flow
+      // based on the third bubble-or-capture argument.
+
+      ul.addEventListener("click", showUl, false);
+      li.addEventListener("click", showLi, false);
+
+    </script>
+  </body>
+</html>

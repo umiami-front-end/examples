@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Listener</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Event Listener</h1>
+
+    <form>
+      <input type="submit" value="Click Me!" />
+    </form>
+
+    <script>
+
+    // get the node to apply an event to
+    var submit = document.querySelector("[type=submit]");
+
+    // set the node to listen for a click
+    // trigger the function when clicked
+    submit.addEventListener("click", function() {
+      document.body.bgColor = "pink";
+      alert("I'm tickled pink!");
+    }, false);
+
+    // why does the page not stay pink? this will be explained
+    // when we address how to prevent default events
+
+    </script>
+  </body>
+</html>

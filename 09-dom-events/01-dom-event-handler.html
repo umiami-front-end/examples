@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Event Handler</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>DOM Event Handler</h1>
+
+    <form>
+      <input type="submit" value="Click me!" />
+    </form>
+
+    <script>
+
+      function displayAlert() {
+        // declare the action we want to occur
+        alert("::giggles:: That tickles!");
+      }
+
+      // get the node to apply an event to
+      var submit = document.querySelector("[type=submit]");
+
+      // apply the event to fire, trigger the function
+      submit.onclick = displayAlert;
+
+    </script>
+  </body>
+</html>

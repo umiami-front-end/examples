@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sales Tax Calculator</title>
+    <style>
+      input {
+        display: block;
+        margin-bottom: 1em;
+      }
+
+      form {
+        border-bottom: 1px solid #222;
+      }
+    </style>
+  </head>
+
+
+  <body>
+
+    <form>
+      <label>Price: </label>
+      <input type="text" name="price" id="price" />
+
+      <label>Tax: </label>
+      <input type="text" name="tax" id="tax" />
+
+      <input type="submit" id="submit" />
+    </form>
+
+    <p id="total"><strong>Sales Tax:</strong> <em></em></p>
+
+
+    <script>
+
+      var priceInput = document.querySelector("#price");
+      var taxInput = document.querySelector("#tax");
+
+      var submit = document.querySelector("#submit");
+
+      submit.addEventListener("click", function() {
+        event.preventDefault();
+        var price = priceInput.value;
+        var tax = taxInput.value;
+        document.querySelector("#total em").textContent = (price * tax);
+      });
+    </script>
+
+  </body>
+</html>

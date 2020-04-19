@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>return false</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1><code>return false;</code></h1>
+
+    <form>
+      <input type="submit" value="Click Me!" />
+    </form>
+
+    <p><small>Because <code>return false;</code> is called before <code>alert("Hello!")</code>, the browser breaks out of the function before the alert can execute.</small></p>
+
+    <script>
+
+      var submit = document.querySelector("[type=submit]");
+
+      function showAlert() {
+        event.preventDefault();
+        console.log("I was clicked, but I won't display an alert!");
+        return false;     // prevents the next line from executing
+        alert("Hello!");  // notice the console returns a warning
+      }
+
+      submit.addEventListener("click", showAlert, false);
+
+    </script>
+  </body>
+</html>

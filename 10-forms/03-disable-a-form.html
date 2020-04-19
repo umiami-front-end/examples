@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Disable a Form</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      label {
+        display: block;
+      }
+
+      input[type="text"] {
+        display: block;
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Yet Another Form</h1>
+
+    <form>
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" />
+
+      <input type="submit" name="submit" />
+    </form>
+
+    <p id="greeting"></p>
+
+    <script>
+      var greeting = document.getElementById("greeting");
+
+      var firstName = document.forms[0].elements.firstName;
+      var submit = document.forms[0].elements.submit;
+      submit.disabled = true;
+
+      firstName.addEventListener("change", function() {
+        submit.disabled = false;
+      });
+
+      // when submit is clicked
+      submit.addEventListener("click", function() {
+        // prevent the page from refreshing
+        event.preventDefault();
+
+        // collect the data entered in firstName, lastName
+        var firstName = document.forms[0].elements.firstName.value;
+        var lastName = document.forms[0].elements.lastName.value;
+
+        // display the full name in the console
+        greeting.textContent = "Hello, " + firstName + " " + lastName + "!";
+      });
+    </script>
+  </body>
+</html>

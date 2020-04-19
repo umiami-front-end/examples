@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Details</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Event Details</h1>
+
+    <form>
+      <input type="submit" value="Click Me!" />
+    </form>
+
+    <p><small>Results are displayed in the JavaScript console.</small></p>
+
+    <script>
+      function eventDetails() {
+        // prevent the default action
+        event.preventDefault();
+
+        // display the event target
+        console.log("* Event target (turn down for object details):");
+        console.dir(event.target);
+
+        // display the event type
+        console.log("* Event type: " + event.type);
+
+        // display if the event can be cancelled
+        console.log("* Event cancelable? " + event.cancelable);
+
+        // all event details
+        console.log("* View all details (turn down for event object details):");
+        console.dir(event);
+      }
+
+      // get the node to apply an event to
+      var submit = document.querySelector("[type=submit]");
+
+      // set the node to listen for a click
+      // trigger the function when clicked
+      submit.addEventListener("click", eventDetails, false);
+
+    </script>
+  </body>
+</html>

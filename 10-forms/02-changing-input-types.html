@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Changing Input Types</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      label {
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        display: block;
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Another Form</h1>
+
+    <form>
+      <label for="username">Username</label>
+      <input type="text" name="username" />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" />
+
+      <label for="showPassword">Show Password</label>
+      <input type="checkbox" name="showPassword" />
+
+    </form>
+
+    <script>
+      var passwordField = document.forms[0].elements.password;
+      var showPassword = document.forms[0].elements.showPassword;
+
+      showPassword.addEventListener("change", function() {
+        if (showPassword.checked) {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      }, false);
+    </script>
+  </body>
+</html>
