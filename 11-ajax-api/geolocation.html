@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Where am I?</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Where am I?</h1>
+
+    <p>Latitude: <span id="lat"></span></p>
+    <p>Longitude: <span id="lon"></span></p>
+
+    <p id="status"></p>
+
+
+    <script>
+
+      // Geolocation API:
+      // https://developer.mozilla.org/en-US/docs/Web/API/Geolocation
+
+      if (navigator.geolocation) {
+        console.log("Geolocation works!");
+
+        // get the user's current position
+        navigator.geolocation.getCurrentPosition(function(position) { // success
+
+          // store the user's position in an object, identifying latitude
+          // and longitude
+          var myPosition = {
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          }
+
+          var latEl = document.querySelector("#lat");
+          var lonEl = document.querySelector("#lon");
+          var statusEl = document.querySelector("#status");
+
+          latEl.textContent = myPosition.lat;
+          lonEl.textContent = myPosition.lon;
+
+        }, function() { // failure
+          // if the browser cannot determine a user's location...
+          statusEl.textContent = "Cannot find location.";
+        });
+      } else {
+        // if geolocation is not supported...
+        statusEl.textContent = "Your browser does not support geolocation."
+      }
+
+    </script>
+
+  </body>
+</html>

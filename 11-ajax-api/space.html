@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>People in Space</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+
+  <body>
+
+    <h1>People in Space</h1>
+
+    <p>How many people are in space? <span></span>.</p>
+
+    <p>Who is in space?</p>
+
+    <ul></ul>
+
+    <script src="js/zepto.min.js"></script>
+    <!--
+      Zepto is a simple JavaScript library which handles AJAX
+      communications to get API endpoints. The library is smaller
+      than jQuery, but it's jQuery-like.
+    -->
+
+    <script>
+
+      var howManyInSpace = document.querySelector("span");
+      var whoIsInSpace = document.querySelector("ul");
+
+      $.getJSON("http://api.open-notify.org/astros.json",
+        function(data) {
+
+          // data is the information passed from zepto
+          // in this example, data.property will return
+          // the property you're looking to single out
+          // from the JSON feed
+
+          console.log(data);
+
+          // how many people are in space?
+          howManyInSpace.textContent = data.number;
+
+          // who is in space?
+          var astronauts = data.people;
+
+          for (i = 0; i < astronauts.length; i++) {
+            var liEl = document.createElement("li");
+            var liText = document.createTextNode(astronauts[i].name);
+            liEl.append(liText);
+            whoIsInSpace.append(liEl);
+          }
+
+        }
+      );
+
+    </script>
+  </body>
+</html>

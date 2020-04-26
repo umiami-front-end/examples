@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather API (with Ajax)</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+
+  <body>
+
+    <h1>Weather API (with Ajax)</h1>
+
+    <p>Open the JavaScript Console to view National Weather Service API data.</p>
+
+    <script>
+
+      // The following code makes a call to an API using ajax (asynchronous
+      // javascript). The request variable stores the XMLHttpRequest object,
+      // which contains methods which allow us to 'talk' to other servers.
+
+      var request = new XMLHttpRequest();
+
+      // The url variable stores the URL of the API we are trying to access.
+      // In this case, we must specify two parameters to the API to make it
+      // return what we expect -- the airport code (i.e. FLL) and the format
+      // of the data (json).
+
+      var url = "https://api.weather.gov/gridpoints/MFL/106,48/forecast/hourly";
+
+      // The following is a function set up to act when the request takes
+      // place and is successful (that's the simple way of putting it).
+      // If the server has responded with an 'OK!' and sends the data, the
+      // results (json) are parsed and stored in a variable which we can then
+      // work with!
+
+    request.onreadystatechange = function() {
+      if (request.readyState == 4 && request.status == 200) {
+        var weather = JSON.parse(request.responseText);
+
+        // We need to pass our data to a function which uses the data in
+        // the variable airport and processes it to be displayed on the
+        // page.
+
+        // For now, let's make sure the data is being pulled in; we'll
+        // use console.log to examine the data.
+
+        console.log("*** All data pulled in from the API: ***");
+        console.log(weather);
+        console.log("*** Only the forecast data from the current hour: ***");
+        console.log(weather.properties.periods[0])
+      }
+    }
+
+    // We make our request to the server.
+
+    request.open("GET", url, true);
+    request.send();
+
+    // Now we can work with the data!
+
+    // We will need to gather the element ids to modify the HTML. We also
+    // need to create a function called 'display' which takes one argument
+    // (data) and processes the information.
+
+    // Want to make your own weather widget? Below is some documentation
+    // from National Weather Service about its API.
+
+    // https://forecast-v3.weather.gov/documentation
+    // https://api.weather.gov/points
+    // https://api.weather.gov/points/25.7476,-80.2595 // Coral Gables
+
+    </script>
+  </body>
+</html>
